@@ -385,5 +385,14 @@
   "nda_in_place": "Yes - 2026-09-20",
   "routed_through_counsel": "Yes - incident report 2025-10-02 via Gallardo & Pike LLP",
   "restrictions": "No AI processing of incident reports"
- }
+ },
+ "life_critical_items": [
+  "Fall protection in place at 6 ft",
+  "Excavation protective system at 5 ft",
+  "Energized work permit",
+  "LOTO verified",
+  "Crane lift plan approved and posted",
+  "ICRA barrier intact and negative pressure verified",
+  "Fire watch in place during hot work"
+ ]
 }

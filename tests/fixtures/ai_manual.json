@@ -1,0 +1,553 @@
+{
+  "drafts": [
+    {
+      "paragraph_ref": "1.2",
+      "title": "Director reviews manual annually",
+      "requirement_text": "The Director of Safety & Health reviews the manual at least once a year and issues revisions with a revision log.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "The Director of Safety & Health owns this manual, reviews it at least once a year and issues revisions with a revision log."
+    },
+    {
+      "paragraph_ref": "1.3",
+      "title": "Designate competent safety representative",
+      "requirement_text": "Every subcontractor shall designate a competent on-site safety representative for each project, by name, before mobilization.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Every subcontractor shall designate a competent on-site safety representative for each project, by name, before mobilization."
+    },
+    {
+      "paragraph_ref": "1.4",
+      "title": "Apply most stringent requirement",
+      "requirement_text": "Where this manual, the contract documents and OSHA differ, the most stringent requirement applies.",
+      "category": "general",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Where this manual, the contract documents and OSHA differ, the most stringent requirement applies."
+    },
+    {
+      "paragraph_ref": "2.1",
+      "title": "Prequalify subcontractors; valid 24 months",
+      "requirement_text": "Subcontractors shall be prequalified before a subcontract is issued. Prequalification is valid for 24 months unless the subcontractor's safety performance changes materially.",
+      "category": "prequalification",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Subcontractors shall be prequalified before a subcontract is issued. Prequalification is valid for 24 months"
+    },
+    {
+      "paragraph_ref": "2.2",
+      "title": "Prequalification requires documents",
+      "requirement_text": "Prequalification requires the three most recent years of EMR, OSHA 300A summaries and hours worked, a certificate of insurance and a copy of the written safety program.",
+      "category": "prequalification",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Prequalification requires the three most recent years of EMR, OSHA 300A summaries and hours worked, a certificate of insurance and a copy of the written safety program."
+    },
+    {
+      "paragraph_ref": "2.3",
+      "title": "EMR/TRIR/citation thresholds require VP approval",
+      "requirement_text": "An EMR above 1.00, a three-year average TRIR above 3.0, or any willful or repeat OSHA citation in the last three years requires written approval by the VP of Operations, with conditions.",
+      "category": "prequalification",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "An EMR above 1.00, a three-year average TRIR above 3.0, or any willful or repeat OSHA citation in the last three years requires written approval by the VP of Operations, with conditions."
+    },
+    {
+      "paragraph_ref": "2.4",
+      "title": "Insurance minimums and naming requirements",
+      "requirement_text": "Minimum insurance: general liability $2,000,000 per occurrence / $4,000,000 aggregate; workers' compensation at statutory limits with employer's liability of $1,000,000; umbrella of $5,000,000 for high-risk trades. Brightwater and the owner are named additional insured.",
+      "category": "insurance",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Minimum insurance: general liability $2,000,000 per occurrence / $4,000,000 aggregate; workers' compensation at statutory limits with employer's liability of $1,000,000; umbrella of $5,000,000 for high-risk trades."
+    },
+    {
+      "paragraph_ref": "2.5",
+      "title": "Keep certificates of insurance current",
+      "requirement_text": "Certificates of insurance shall be current at all times. A subcontractor whose certificate lapses shall not work on site until a current certificate is received.",
+      "category": "insurance",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Certificates of insurance shall be current at all times. A subcontractor whose certificate lapses shall not work on site until a current certificate is received."
+    },
+    {
+      "paragraph_ref": "3.1",
+      "title": "Submit site-specific safety plan",
+      "requirement_text": "Each subcontractor shall submit a site-specific safety plan within 10 working days of award and before mobilization.",
+      "category": "submittals",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Each subcontractor shall submit a site-specific safety plan within 10 working days of award and before mobilization."
+    },
+    {
+      "paragraph_ref": "3.2",
+      "title": "Safety plan must include scope and analysis",
+      "requirement_text": "The plan shall include the subcontractor's scope, hazard analysis for each high-risk activity, competent persons, emergency contacts and a training matrix.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "The plan shall include the subcontractor's scope, hazard analysis for each high-risk activity, competent persons, emergency contacts and a training matrix."
+    },
+    {
+      "paragraph_ref": "3.3",
+      "title": "PSM approval before work starts",
+      "requirement_text": "Brightwater's Project Safety Manager reviews and approves the plan. Work may not start until it is approved.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Brightwater's Project Safety Manager reviews and approves the plan. Work may not start until it is approved."
+    },
+    {
+      "paragraph_ref": "3.4",
+      "title": "Complete activity hazard analyses before phases",
+      "requirement_text": "Activity hazard analyses (AHAs) shall be completed before each new phase of work and reviewed with the crew.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Activity hazard analyses (AHAs) shall be completed before each new phase of work and reviewed with the crew."
+    },
+    {
+      "paragraph_ref": "4.1",
+      "title": "Complete site orientation before starting",
+      "requirement_text": "Every person working on a Brightwater site shall complete the Brightwater site orientation before starting work.",
+      "category": "orientation_training",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Every person working on a Brightwater site shall complete the Brightwater site orientation before starting work."
+    },
+    {
+      "paragraph_ref": "4.2",
+      "title": "Healthcare infection control orientation",
+      "requirement_text": "On healthcare projects, workers in or next to occupied areas shall also complete the owner's infection control and hospital awareness module.",
+      "category": "orientation_training",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "On healthcare projects, workers in or next to occupied areas shall also complete the owner's infection control and hospital awareness module."
+    },
+    {
+      "paragraph_ref": "4.3",
+      "title": "Maintain training records; produce within 24 hours",
+      "requirement_text": "Subcontractors keep their own training records and shall produce them on request within 24 hours.",
+      "category": "orientation_training",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Subcontractors keep their own training records and shall produce them on request within 24 hours."
+    },
+    {
+      "paragraph_ref": "5.1",
+      "title": "Fall protection at 6 feet and above",
+      "requirement_text": "Fall protection is required at 6 feet or more above a lower level for all trades and all activities, including steel erection and leading-edge work.",
+      "category": "fall_protection",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Fall protection is required at 6 feet or more above a lower level for all trades and all activities, including steel erection and leading-edge work."
+    },
+    {
+      "paragraph_ref": "5.2",
+      "title": "Scaffold guardrails at 6 feet",
+      "requirement_text": "Scaffolds shall have guardrails at 6 feet; the OSHA 10-foot scaffold trigger does not apply on Brightwater sites.",
+      "category": "fall_protection",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Scaffolds shall have guardrails at 6 feet; the OSHA 10-foot scaffold trigger does not apply on Brightwater sites."
+    },
+    {
+      "paragraph_ref": "5.3",
+      "title": "Inspect and anchor fall arrest systems",
+      "requirement_text": "Personal fall arrest systems shall be inspected before each use and anchored to anchors rated for 5,000 lb or designed by a qualified person.",
+      "category": "fall_protection",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Personal fall arrest systems shall be inspected before each use and anchored to anchors rated for 5,000 lb or designed by a qualified person."
+    },
+    {
+      "paragraph_ref": "5.4",
+      "title": "Cover and mark floor/roof openings",
+      "requirement_text": "Floor and roof openings shall be covered, secured and marked \"HOLE\" or \"COVER\" as soon as they are created.",
+      "category": "fall_protection",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Floor and roof openings shall be covered, secured and marked \"HOLE\" or \"COVER\" as soon as they are created."
+    },
+    {
+      "paragraph_ref": "6.1",
+      "title": "Ladder use above 6 feet requires approval",
+      "requirement_text": "Ladders are a last resort. Use of step or extension ladders above 6 feet requires the superintendent's approval of a ladder use plan.",
+      "category": "fall_protection",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Use of step or extension ladders above 6 feet requires the superintendent's approval of a ladder use plan."
+    },
+    {
+      "paragraph_ref": "6.2",
+      "title": "Aerial lift operators trained; boom occupants tied off",
+      "requirement_text": "Aerial lift operators shall be trained and familiarized on the model used; occupants of boom lifts shall be tied off to the manufacturer's anchor.",
+      "category": "fall_protection",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Aerial lift operators shall be trained and familiarized on the model used; occupants of boom lifts shall be tied off to the manufacturer's anchor."
+    },
+    {
+      "paragraph_ref": "7.1",
+      "title": "811 locate ticket and private utility location",
+      "requirement_text": "Before any digging, a Sunshine 811 locate ticket shall be current and private utilities located by a private locator.",
+      "category": "excavation",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Before any digging, a Sunshine 811 locate ticket shall be current and private utilities located by a private locator."
+    },
+    {
+      "paragraph_ref": "7.2",
+      "title": "Excavation protective systems based on depth",
+      "requirement_text": "Excavations 5 feet or deeper shall have a protective system; excavations over 20 feet shall have a protective system designed by a registered professional engineer.",
+      "category": "excavation",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Excavations 5 feet or deeper shall have a protective system; excavations over 20 feet shall have a protective system designed by a registered professional engineer."
+    },
+    {
+      "paragraph_ref": "7.3",
+      "title": "Daily excavation inspections and record keeping",
+      "requirement_text": "A competent person shall inspect excavations daily, after every rain event and after any change in conditions, and record the inspection.",
+      "category": "excavation",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "A competent person shall inspect excavations daily, after every rain event and after any change in conditions, and record the inspection."
+    },
+    {
+      "paragraph_ref": "7.4",
+      "title": "Spoil and equipment setback from excavation",
+      "requirement_text": "Spoil and equipment shall be kept at least 2 feet from the edge of an excavation.",
+      "category": "excavation",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Spoil and equipment shall be kept at least 2 feet from the edge of an excavation."
+    },
+    {
+      "paragraph_ref": "8.1",
+      "title": "Hot work permit required outside shops",
+      "requirement_text": "All welding, cutting, brazing and grinding outside designated shop areas requires a Brightwater hot work permit.",
+      "category": "hot_work",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "All welding, cutting, brazing and grinding outside designated shop areas requires a Brightwater hot work permit."
+    },
+    {
+      "paragraph_ref": "8.2",
+      "title": "Combustible removal and fire watch for hot work",
+      "requirement_text": "Combustibles within 35 feet shall be removed or protected, and a fire watch shall be maintained during the work and for 60 minutes after it ends.",
+      "category": "hot_work",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Combustibles within 35 feet shall be removed or protected, and a fire watch shall be maintained during the work and for 60 minutes after it ends."
+    },
+    {
+      "paragraph_ref": "8.3",
+      "title": "Healthcare hot work requires ILSM and owner approval",
+      "requirement_text": "Hot work in or next to an occupied healthcare building also requires an interim life safety measures (ILSM) assessment and the owner's approval before the permit is issued.",
+      "category": "hot_work",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Hot work in or next to an occupied healthcare building also requires an interim life safety measures (ILSM) assessment and the owner's approval before the permit is issued."
+    },
+    {
+      "paragraph_ref": "8.4",
+      "title": "Fire protection impairment notice required",
+      "requirement_text": "Fire protection systems shall not be impaired without an approved impairment notice; the owner shall be notified and a fire watch posted for the duration.",
+      "category": "fire_protection",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Fire protection systems shall not be impaired without an approved impairment notice; the owner shall be notified and a fire watch posted for the duration."
+    },
+    {
+      "paragraph_ref": "9.1",
+      "title": "LOTO follows written program with individual locks",
+      "requirement_text": "Lockout/tagout shall follow the subcontractor's written energy control program, reviewed by Brightwater, with individual locks for each worker.",
+      "category": "electrical_loto",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Lockout/tagout shall follow the subcontractor's written energy control program, reviewed by Brightwater, with individual locks for each worker."
+    },
+    {
+      "paragraph_ref": "9.2",
+      "title": "Verify zero energy before work begins",
+      "requirement_text": "Zero energy shall be verified by try-out and testing before work begins.",
+      "category": "electrical_loto",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Zero energy shall be verified by try-out and testing before work begins."
+    },
+    {
+      "paragraph_ref": "9.3",
+      "title": "Hospital tie-in coordination with 14-day notice",
+      "requirement_text": "Tie-ins to existing hospital systems shall be coordinated through the owner's utility shutdown request process with at least 14 calendar days' notice.",
+      "category": "electrical_loto",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Tie-ins to existing hospital systems shall be coordinated through the owner's utility shutdown request process with at least 14 calendar days' notice."
+    },
+    {
+      "paragraph_ref": "10.1",
+      "title": "Energized electrical work requires permit and signatures",
+      "requirement_text": "Energized electrical work is prohibited unless justified under NFPA 70E and authorized on an energized electrical work permit signed by the subcontractor, Brightwater's Project Safety Manager and the Project Manager.",
+      "category": "electrical_loto",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Energized electrical work is prohibited unless justified under NFPA 70E and authorized on an energized electrical work permit signed by the subcontractor, Brightwater's Project Safety Manager and the Project Manager."
+    },
+    {
+      "paragraph_ref": "10.2",
+      "title": "Temporary power GFCI protection and cord inspection",
+      "requirement_text": "Temporary power shall be GFCI protected, and cords inspected daily.",
+      "category": "electrical_loto",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Temporary power shall be GFCI protected, and cords inspected daily."
+    },
+    {
+      "paragraph_ref": "11.1",
+      "title": "Critical lift plan requirements",
+      "requirement_text": "A critical lift plan is required for any lift above 75% of the crane's rated capacity, tandem lifts, personnel lifts, and any lift over an occupied building or occupied area.",
+      "category": "crane_rigging",
+      "high_risk": true,
+      "suggested_layer": "project",
+      "quote": "A critical lift plan is required for any lift above 75% of the crane's rated capacity, tandem lifts, personnel lifts, and any lift over an occupied building or occupied area."
+    },
+    {
+      "paragraph_ref": "11.2",
+      "title": "Critical lift plans submitted 48 hours; PSM approval",
+      "requirement_text": "Critical lift plans shall be submitted at least 48 hours before the lift and approved by Brightwater's Project Safety Manager.",
+      "category": "crane_rigging",
+      "high_risk": true,
+      "suggested_layer": "project",
+      "quote": "Critical lift plans shall be submitted at least 48 hours before the lift and approved by Brightwater's Project Safety Manager."
+    },
+    {
+      "paragraph_ref": "11.3",
+      "title": "No loads over occupied hospital without plan",
+      "requirement_text": "Loads shall not be lifted over the occupied hospital unless the owner has approved a written evacuation or protection plan for the affected area.",
+      "category": "crane_rigging",
+      "high_risk": true,
+      "suggested_layer": "project",
+      "quote": "Loads shall not be lifted over the occupied hospital unless the owner has approved a written evacuation or protection plan for the affected area."
+    },
+    {
+      "paragraph_ref": "11.4",
+      "title": "Lift personnel credentials required on site",
+      "requirement_text": "Operators shall be certified; riggers and signal persons qualified, with proof available on site.",
+      "category": "crane_rigging",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Operators shall be certified; riggers and signal persons qualified, with proof available on site."
+    },
+    {
+      "paragraph_ref": "12.1",
+      "title": "Permit-required confined space entry",
+      "requirement_text": "Permit-required confined spaces shall be entered only under a written entry permit with atmospheric testing and a rescue plan.",
+      "category": "confined_space",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Permit-required confined spaces shall be entered only under a written entry permit with atmospheric testing and a rescue plan."
+    },
+    {
+      "paragraph_ref": "13.1",
+      "title": "Silica task controls per regulation or assessment",
+      "requirement_text": "Silica-generating tasks shall follow Table 1 of 29 CFR 1926.1153 or an exposure assessment.",
+      "category": "health_hazards",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Silica-generating tasks shall follow Table 1 of 29 CFR 1926.1153 or an exposure assessment."
+    },
+    {
+      "paragraph_ref": "13.2",
+      "title": "Asbestos/lead survey before hospital disturbance",
+      "requirement_text": "Work that disturbs ceilings, walls or floors in an existing hospital area requires an asbestos and lead survey review before work starts.",
+      "category": "health_hazards",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Work that disturbs ceilings, walls or floors in an existing hospital area requires an asbestos and lead survey review before work starts."
+    },
+    {
+      "paragraph_ref": "13.3",
+      "title": "Noise/vibration limits and monitoring",
+      "requirement_text": "Noise and vibration next to occupied patient areas shall stay within the limits set by the owner, and shall be monitored when the owner requests it.",
+      "category": "health_hazards",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Noise and vibration next to occupied patient areas shall stay within the limits set by the owner, and shall be monitored when the owner requests it."
+    },
+    {
+      "paragraph_ref": "14.1",
+      "title": "Minimum PPE requirements",
+      "requirement_text": "Minimum PPE: hard hat (Type II on steel and crane work), safety glasses, high-visibility garment (Class 2), gloves suited to the task and safety-toe boots.",
+      "category": "ppe",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Minimum PPE: hard hat (Type II on steel and crane work), safety glasses, high-visibility garment (Class 2), gloves suited to the task and safety-toe boots."
+    },
+    {
+      "paragraph_ref": "15.1",
+      "title": "Daily work area cleaning and clear exits",
+      "requirement_text": "Work areas shall be cleaned daily; walkways and exits kept clear at all times.",
+      "category": "general",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Work areas shall be cleaned daily; walkways and exits kept clear at all times."
+    },
+    {
+      "paragraph_ref": "15.2",
+      "title": "Hospital entrances and fire lanes unobstructed",
+      "requirement_text": "Hospital entrances, ambulance routes and fire lanes shall never be blocked, even temporarily.",
+      "category": "general",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Hospital entrances, ambulance routes and fire lanes shall never be blocked, even temporarily."
+    },
+    {
+      "paragraph_ref": "16.1",
+      "title": "ICRA and permit before healthcare work",
+      "requirement_text": "An infection control risk assessment (ICRA) and ICRA permit shall be in place before any work in or next to an occupied healthcare area. The permit class sets the controls.",
+      "category": "infection_control",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "An infection control risk assessment (ICRA) and ICRA permit shall be in place before any work in or next to an occupied healthcare area."
+    },
+    {
+      "paragraph_ref": "16.2",
+      "title": "Class III/IV barriers, negative pressure, HEPA exhaust",
+      "requirement_text": "Class III and IV work requires hard barriers sealed floor to deck, negative air pressure verified and recorded at least daily, and HEPA-filtered exhaust.",
+      "category": "infection_control",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Class III and IV work requires hard barriers sealed floor to deck, negative air pressure verified and recorded at least daily, and HEPA-filtered exhaust."
+    },
+    {
+      "paragraph_ref": "16.3",
+      "title": "Barrier inspection and breach response",
+      "requirement_text": "Barriers shall be inspected daily by the subcontractor and weekly by the owner's infection prevention staff; any breach stops the work until it is repaired.",
+      "category": "infection_control",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "Barriers shall be inspected daily by the subcontractor and weekly by the owner's infection prevention staff; any breach stops the work until it is repaired."
+    },
+    {
+      "paragraph_ref": "17.1",
+      "title": "Weekly documented site inspection",
+      "requirement_text": "The superintendent performs a documented weekly site inspection.",
+      "category": "inspection",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "The superintendent performs a documented weekly site inspection."
+    },
+    {
+      "paragraph_ref": "17.2",
+      "title": "PSM audits subcontractors monthly",
+      "requirement_text": "The Project Safety Manager audits each subcontractor at least monthly.",
+      "category": "inspection",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "The Project Safety Manager audits each subcontractor at least monthly."
+    },
+    {
+      "paragraph_ref": "17.3",
+      "title": "Healthcare joint monthly safety walk",
+      "requirement_text": "On healthcare projects, a joint monthly walk with the owner covers the connection areas.",
+      "category": "inspection",
+      "high_risk": false,
+      "suggested_layer": "project",
+      "quote": "On healthcare projects, a joint monthly walk with the owner covers the connection areas."
+    },
+    {
+      "paragraph_ref": "18.2",
+      "title": "Corrective action correction times",
+      "requirement_text": "Imminent danger shall be corrected immediately and the work stopped until it is; Serious within 24 hours; all others within 7 days.",
+      "category": "corrective_action",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "Imminent danger shall be corrected immediately and the work stopped until it is; Serious within 24 hours; all others within 7 days."
+    },
+    {
+      "paragraph_ref": "18.3",
+      "title": "Escalation for late corrective actions",
+      "requirement_text": "Corrective actions not closed on time are escalated to the subcontractor's project manager, then its principal after 2 days, then Brightwater's VP of Operations after 5 days.",
+      "category": "escalation",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Corrective actions not closed on time are escalated to the subcontractor's project manager, then its principal after 2 days, then Brightwater's VP of Operations after 5 days."
+    },
+    {
+      "paragraph_ref": "19.1",
+      "title": "Report injuries and near misses immediately",
+      "requirement_text": "All injuries, near misses and property damage shall be reported to the superintendent immediately and in writing within 1 hour.",
+      "category": "incident_reporting",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "All injuries, near misses and property damage shall be reported to the superintendent immediately and in writing within 1 hour."
+    },
+    {
+      "paragraph_ref": "19.2",
+      "title": "Serious incident investigation within 72 hours",
+      "requirement_text": "Serious incidents are investigated to root cause within 72 hours with a written report.",
+      "category": "incident_reporting",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Serious incidents are investigated to root cause within 72 hours with a written report."
+    },
+    {
+      "paragraph_ref": "19.3",
+      "title": "Submit monthly hours and injury data",
+      "requirement_text": "Subcontractors submit monthly hours worked and injury data by the 5th of the following month.",
+      "category": "incident_reporting",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Subcontractors submit monthly hours worked and injury data by the 5th of the following month."
+    },
+    {
+      "paragraph_ref": "20.1",
+      "title": "Authority and obligation to stop unsafe work",
+      "requirement_text": "Every person on site has the authority and the obligation to stop work that is unsafe. No one will be disciplined for a good-faith stop.",
+      "category": "general",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Every person on site has the authority and the obligation to stop work that is unsafe. No one will be disciplined for a good-faith stop."
+    },
+    {
+      "paragraph_ref": "20.2",
+      "title": "Restart imminent danger work after approval",
+      "requirement_text": "Work stopped for an imminent danger restarts only after the superintendent and the subcontractor's foreman agree the hazard is controlled, and the Project Safety Manager is informed.",
+      "category": "emergency",
+      "high_risk": true,
+      "suggested_layer": "project",
+      "quote": "Work stopped for an imminent danger restarts only after the superintendent and the subcontractor's foreman agree the hazard is controlled, and the Project Safety Manager is informed."
+    },
+    {
+      "paragraph_ref": "21.1",
+      "title": "Drug and alcohol testing program",
+      "requirement_text": "Subcontractors shall maintain a drug and alcohol program with pre-access, post-incident and reasonable-suspicion testing.",
+      "category": "program",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Subcontractors shall maintain a drug and alcohol program with pre-access, post-incident and reasonable-suspicion testing."
+    },
+    {
+      "paragraph_ref": "22.1",
+      "title": "Contractor evaluation and status assignment",
+      "requirement_text": "Each subcontractor is evaluated at completion of its scope on safety performance, corrective action timeliness and plan quality. The result sets its status for future bids: Preferred, Approved or Conditional.",
+      "category": "contractor_evaluation",
+      "high_risk": false,
+      "suggested_layer": "company",
+      "quote": "Each subcontractor is evaluated at completion of its scope on safety performance, corrective action timeliness and plan quality. The result sets its status for future bids: Preferred, Approved or Conditional."
+    },
+    {
+      "paragraph_ref": "22.2",
+      "title": "Serious injury/near miss triggers performance plan",
+      "requirement_text": "A serious injury or a serious near miss places the subcontractor on Conditional status with a performance improvement plan for 12 months.",
+      "category": "contractor_evaluation",
+      "high_risk": true,
+      "suggested_layer": "company",
+      "quote": "A serious injury or a serious near miss places the subcontractor on Conditional status with a performance improvement plan for 12 months."
+    }
+  ]
+}

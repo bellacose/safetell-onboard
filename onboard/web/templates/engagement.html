@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block title %}{{ e.name }} · SafeTell Onboard{% endblock %}{% block body %}
+<h1>{{ e.name }}</h1><p class="muted">{{ e.contact_name or '' }} {{ e.contact_email or '' }}</p>
+<div class="steps"><a href="{{ url_for('assessment', eid=e.id) }}">1 · Assessment (Forms A–C)</a><a href="#files">2 · Files</a><a href="#docs">3 · Manuals &amp; specs</a><a href="#sheets">4 · Spreadsheets</a><a href="{{ url_for('package_view', eid=e.id) }}">5 · Package for SafeTell</a></div>
+
+{% if a and a.scores %}<div class="card grid g4">
+<div><div class="muted small">Composite risk</div><div class="stat">{{ a.scores.composite }} · {{ a.scores.rank }}</div></div>
+<div><div class="muted small">Declared / required tier</div><div class="stat">{{ a.scores.declared_tier }} / {{ a.scores.required_tier }}</div></div>
+<div><div class="muted small">Evidence set</div><div class="stat">{{ a.scores.evidence_set|capitalize }}</div></div>
+<div><div class="muted small">Priority flags</div><div class="stat">{{ a.scores.priority_flags|length }}</div></div></div>{% endif %}
+
+<h2 id="files">Files the customer sent</h2>
+<div class="card"><form method="post" enctype="multipart/form-data" action="{{ url_for('upload', eid=e.id) }}" class="grid g4">
+<input type="file" name="file" required>
+<select name="kind">{% for k,v in kinds.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}</select>
+<input name="title" placeholder="Title (manuals/specs)"><input name="project_code" placeholder="Project code (owner specs)">
+<input name="form_c_ref" placeholder="Form C ref, e.g. D02"><label><input type="checkbox" name="no_ai"> Customer says: do not send to AI</label><span></span><button>Upload</button></form>
+<table style="margin-top:12px"><tr><th>File</th><th>Type</th><th>Form C</th><th></th><th></th></tr>
+{% for u in e.uploads %}<tr><td><a href="{{ url_for('download_upload', eid=e.id, uid=u.id) }}">{{ u.filename }}</a></td><td>{{ kinds.get(u.kind, u.kind) }}</td><td>{{ u.form_c_ref or '' }}</td>
+<td>{% if u.no_ai %}<span class="chip warn">no AI</span>{% endif %}{% if u.mapping %}<span class="chip ok">mapped → {{ u.mapping.target }}</span>{% endif %}</td>
+<td>{% if u.filename.lower().endswith(('.xlsx','.xlsm','.csv')) %}<a href="{{ url_for('sheet', eid=e.id, uid=u.id) }}">Map columns</a>{% endif %}</td></tr>
+{% else %}<tr><td colspan="5" class="muted">Nothing yet.</td></tr>{% endfor %}</table></div>
+
+<h2 id="docs">Manuals and specs → requirements</h2>
+<div class="card"><table><tr><th>Document</th><th>Paragraphs</th><th>Accepted</th><th>Skipped</th><th>Not covered</th><th>Unverified quotes</th><th>Review</th></tr>
+{% for d, c in docs %}<tr><td><a href="{{ url_for('document', eid=e.id, did=d.id) }}">{{ d.title }}</a> <span class="muted small">{{ d.kind.replace('_',' ') }}{% if d.project_code %} · {{ d.project_code }}{% endif %}</span></td>
+<td>{{ c.paragraphs }}</td><td>{{ c.accepted }}</td><td>{{ c.skipped }}</td><td>{% if c.not_covered %}<span class="chip bad">{{ c.not_covered }}</span>{% else %}0{% endif %}</td><td>{{ c.unverified_quotes }}</td>
+<td>{% if d.review_complete %}<span class="chip ok">complete</span>{% else %}<span class="chip">in review</span>{% endif %}</td></tr>
+{% else %}<tr><td colspan="7" class="muted">Upload a company manual or an owner spec above.</td></tr>{% endfor %}</table></div>
+
+<h2 id="sheets">Spreadsheets</h2><p class="muted">Vendor list, corrective-action log, injury log, man-hours and their inspection form. Open each to confirm the columns.</p>
+{% endblock %}

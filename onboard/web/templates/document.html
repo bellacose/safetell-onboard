@@ -1,0 +1,54 @@
+{% extends 'base.html' %}{% block title %}{{ d.title }} · review{% endblock %}{% block body %}
+<p><a href="{{ url_for('engagement', eid=e.id) }}">← {{ e.name }}</a></p>
+<h1>{{ d.title }}</h1><p class="muted">{{ d.kind.replace('_',' ') }}{% if d.project_code %} · project {{ d.project_code }}{% endif %}{% if up and up.no_ai %} · <span class="chip warn">customer said no AI: draft by hand</span>{% endif %}</p>
+<div class="card grid g4">
+<div><div class="muted small">Numbered paragraphs</div><div class="stat">{{ c.paragraphs }}</div></div>
+<div><div class="muted small">Accepted · skipped</div><div class="stat">{{ c.accepted }} · {{ c.skipped }}</div></div>
+<div><div class="muted small">Not covered</div><div class="stat" style="color:{{ 'var(--bad)' if c.not_covered else 'inherit' }}">{{ c.not_covered }}</div></div>
+<div><div class="muted small">Unverified quotes · number flags</div><div class="stat">{{ c.unverified_quotes }} · {{ c.number_flags }}</div></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+{% if not d.review_complete %}
+ {% if not (up and up.no_ai) and not (d.drafts|selectattr('origin','equalto','ai')|list) %}<form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='ai') }}"><button {% if not ai_ready %}disabled title="Set ANTHROPIC_API_KEY or OPENROUTER_API_KEY"{% endif %}>Draft requirements with AI</button></form>{% endif %}
+ {% if c.pending_drafts %}<form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='accept_verified') }}"><button class="ghost" title="Only drafts whose quote is in the paragraph and whose numbers match">Accept all verified drafts</button></form>{% endif %}
+ <form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='complete') }}"><button class="ghost">Mark review complete</button></form>
+{% else %}<span class="chip ok">Review complete</span><form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='reopen') }}"><button class="ghost">Reopen</button></form>{% endif %}
+</div>
+<p class="muted small">Every numbered paragraph must end up accepted, or skipped with a reason. Quotes and numbers are checked against the paragraph, never taken from the AI on trust.</p>
+
+{% for p in d.paragraphs %}{% set st = c.states[p.ref] %}
+{% if st == 'heading' %}<div class="para heading" id="p-{{ p.ref }}">{{ p.ref }} {{ p.text }}</div>{% else %}
+<div class="review" id="p-{{ p.ref }}">
+ <div class="para {{ st }}"><b>{{ p.ref }}</b> <span class="chip {{ {'accepted':'ok','not_covered':'bad','skipped':'','draft':'warn'}[st] }}">{{ st.replace('_',' ') }}</span>
+  <div>{{ p.text }}</div>
+  {% if skips.get(p.ref) %}<div class="muted small">Skipped: {{ skips[p.ref] }}</div>{% if not d.review_complete %}<form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='unskip') }}"><input type="hidden" name="ref" value="{{ p.ref }}"><button class="ghost small">Undo skip</button></form>{% endif %}
+  {% elif not d.review_complete and st in ('not_covered','draft') %}
+  <details {% if st=='not_covered' %}open{% endif %}><summary>Add a requirement by hand / not a requirement</summary>
+   <form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='draft') }}"><input type="hidden" name="ref" value="{{ p.ref }}">
+    <p><input name="title" placeholder="Title" required style="width:100%"></p><p><textarea name="requirement_text" rows="2" placeholder="Requirement" required></textarea></p>
+    <p><textarea name="quote" rows="2" placeholder="Quote (copy from the paragraph)"></textarea></p>
+    <p><select name="category">{% for c2 in categories %}<option>{{ c2 }}</option>{% endfor %}</select> <label><input type="checkbox" name="high_risk"> high risk</label> <button>Add draft</button></p></form>
+   <form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='skip') }}"><input type="hidden" name="ref" value="{{ p.ref }}">
+    <input name="reason" placeholder="Why it isn't a requirement" required> <button class="ghost">Not a requirement</button></form>
+  </details>{% endif %}
+ </div>
+ <div>{% for dr in by_ref.get(p.ref, []) %}
+  <div class="draft {{ dr.status }}"><b>{{ dr.title }}</b> <span class="chip">{{ dr.category }}</span>{% if dr.high_risk %}<span class="chip bad">high risk</span>{% endif %}<span class="chip">{{ dr.origin }}</span>
+   <span class="chip {{ 'ok' if dr.status=='accepted' else 'bad' if dr.status=='rejected' else '' }}">{{ dr.status }}</span>
+   <div>{{ dr.requirement_text }}</div>
+   <div class="small muted">“{{ dr.quote or '' }}” {% if dr.quote_verified %}<span class="chip ok">quote found</span>{% else %}<span class="chip warn">quote not found in {{ dr.paragraph_ref }}</span>{% endif %}
+   {% if dr.unmatched_numbers %}<span class="chip bad">numbers not in paragraph: {{ dr.unmatched_numbers|join(', ') }}</span>{% endif %}{% if dr.accepted_without_quote %}<span class="chip warn">accepted without verified quote</span>{% endif %}</div>
+   {% if dr.note %}<div class="small">Note: {{ dr.note }}</div>{% endif %}
+   {% if dr.status == 'pending' and not d.review_complete %}
+   <details><summary>Accept / edit / reject</summary>
+    <form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='decide') }}"><input type="hidden" name="draft_id" value="{{ dr.id }}"><input type="hidden" name="ref" value="{{ p.ref }}"><input type="hidden" name="decision" value="accept">
+     <p><input name="title" value="{{ dr.title }}" style="width:100%"></p><p><textarea name="requirement_text" rows="2">{{ dr.requirement_text }}</textarea></p>
+     <p><textarea name="quote" rows="2">{{ dr.quote or '' }}</textarea></p>
+     <p><select name="category">{% for c2 in categories %}<option {% if c2==dr.category %}selected{% endif %}>{{ c2 }}</option>{% endfor %}</select>
+     <label><input type="checkbox" name="high_risk" {% if dr.high_risk %}checked{% endif %}> high risk</label>
+     {% if not dr.quote_verified %}<label><input type="checkbox" name="without_quote"> accept without a verified quote</label>{% endif %} <button>Accept</button></p></form>
+    <form method="post" action="{{ url_for('document_action', eid=e.id, did=d.id, action='decide') }}"><input type="hidden" name="draft_id" value="{{ dr.id }}"><input type="hidden" name="ref" value="{{ p.ref }}"><input type="hidden" name="decision" value="reject">
+     <input name="note" placeholder="Why reject" required> <button class="danger">Reject</button></form>
+   </details>{% endif %}
+  </div>{% endfor %}</div>
+</div>{% endif %}{% endfor %}
+{% endblock %}

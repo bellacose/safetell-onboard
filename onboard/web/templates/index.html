@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block body %}
+<h1>Customers</h1><p class="muted">Each customer goes through the assessment (Forms A–E), then we prepare their files for SafeTell's importers.</p>
+<div class="card"><form method="post" action="{{ url_for('new_engagement') }}" class="grid g4">
+<input name="name" placeholder="Customer company" required><input name="contact_name" placeholder="Their admin (name)"><input name="contact_email" placeholder="Their admin (email)"><button>Add customer</button></form></div>
+<div class="card"><table><tr><th>Customer</th><th>Stage</th><th>Files</th><th>Documents</th><th>Added</th></tr>
+{% for e in engagements %}<tr><td><a href="{{ url_for('engagement', eid=e.id) }}">{{ e.name }}</a></td><td>{{ e.status }}</td><td>{{ e.uploads|length }}</td><td>{{ e.documents|length }}</td><td>{{ e.created_at.strftime('%Y-%m-%d') }}</td></tr>
+{% else %}<tr><td colspan="5" class="muted">No customers yet.</td></tr>{% endfor %}</table></div>{% endblock %}

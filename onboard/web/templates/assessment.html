@@ -1,0 +1,41 @@
+{% extends 'base.html' %}{% block title %}{{ e.name }} · assessment{% endblock %}{% block body %}
+<p><a href="{{ url_for('engagement', eid=e.id) }}">← {{ e.name }}</a></p>
+<h1>Assessment · Forms A–C</h1><p class="muted">Their answers, scored with Form B's own rules. Forms D and E (consultant analysis, gap plan) come next.</p>
+<form method="post" enctype="multipart/form-data" action="{{ url_for('assessment_import', eid=e.id) }}" class="small">Load answers from a JSON file: <input type="file" name="file"> <button class="ghost">Load</button></form>
+
+{% if sc %}<div class="card"><div class="grid g4">
+<div><div class="muted small">B1 hazard · B2 loss</div><div class="stat">{{ sc.b1 }} · {{ sc.b2 }}</div></div>
+<div><div class="muted small">B3 tier · B4 organisation</div><div class="stat">{{ sc.b3 }} · {{ sc.b4 }}</div></div>
+<div><div class="muted small">Composite / rank</div><div class="stat">{{ sc.composite }} · {{ sc.rank }}</div></div>
+<div><div class="muted small">Required tier (declared)</div><div class="stat">{{ sc.required_tier }} ({{ sc.declared_tier }})</div></div></div>
+{% if sc.priority_flags %}<div class="flash"><b>Priority routing: contact within 24 hours.</b><ul>{% for f in sc.priority_flags %}<li>{{ f }}</li>{% endfor %}</ul></div>{% endif %}
+{% if sc.auto_p1_gaps %}<p><b>Automatic P1 gaps for Form E:</b></p><ul>{% for g in sc.auto_p1_gaps %}<li>{{ g }}</li>{% endfor %}</ul>{% endif %}
+{% if sc.tier_confirmation_doubts %}<p class="muted">Tier check: {{ sc.tier_confirmation_doubts|length }} of the B3.1 confirmation answers are No/Unsure ({{ sc.tier_confirmation_doubts|join(', ') }}). Raise early if they declared Tier 4+.</p>{% endif %}
+</div>{% endif %}
+
+<form method="post">
+<h2>A4 · Screening</h2><div class="card"><table>{% for k, q in forms.A4_QUESTIONS %}<tr><td>{{ q }}</td><td>{% for opt in ['Yes','No','Unsure'] %}<label><input type="radio" name="a4_{{ k }}" value="{{ opt }}" {% if ans.get('A4',{}).get(k)==opt %}checked{% endif %}> {{ opt }}</label> {% endfor %}</td></tr>{% endfor %}</table>
+<p>Deadline <input name="deadline" value="{{ ans.get('A5',{}).get('deadline','') }}" style="width:50%"> date <input type="date" name="deadline_date" value="{{ ans.get('A5',{}).get('deadline_date','') }}"></p></div>
+
+<h2>B1 · Hazard exposure</h2><div class="card"><table><tr><th>Activity</th><th>Severity</th><th>Done</th><th>Frequency 1-5</th><th>Written procedure</th></tr>
+{% for act, sev in forms.B1_ACTIVITIES %}{% set r = b1.get(act) %}<tr><td>{{ act }}</td><td>{{ sev }}</td><td><input type="checkbox" name="b1_done_{{ loop.index0 }}" {% if r and r[1] %}checked{% endif %}></td>
+<td><input type="number" min="1" max="5" name="b1_freq_{{ loop.index0 }}" value="{{ r[2] if r and r[2] else '' }}" style="width:60px"></td><td><input type="checkbox" name="b1_proc_{{ loop.index0 }}" {% if r and r[3] %}checked{% endif %}></td></tr>{% endfor %}
+{% for j in range(2) %}{% set o = others[j] if others|length > j else None %}<tr><td><input name="b1_other_{{ j }}" placeholder="Other exposure (severity 5)" value="{{ o[0] if o else '' }}"></td><td>5</td><td></td>
+<td><input type="number" min="1" max="5" name="b1_other_freq_{{ j }}" value="{{ o[2] if o and o[2] else '' }}" style="width:60px"></td><td><input type="checkbox" name="b1_other_proc_{{ j }}" {% if o and o[3] %}checked{% endif %}></td></tr>{% endfor %}</table></div>
+
+<h2>B2 · Loss history</h2><div class="card">{% for s, text in forms.B2_BANDS %}<p><label><input type="radio" name="b2_band" value="{{ text }}" {% if ans.get('B2',{}).get('band_selected')==text %}checked{% endif %}> <b>{{ s }}</b> {{ text }}</label></p>{% endfor %}
+<div class="grid g4">{% for k in forms.B2_INTEGRITY_UNFAVOURABLE %}<label>{{ k.replace('_',' ') }}<br><select name="b2i_{{ k }}">{% for opt in ['','Yes','No','Partly','Unsure'] %}<option {% if ans.get('B2',{}).get('integrity',{}).get(k)==opt %}selected{% endif %}>{{ opt }}</option>{% endfor %}</select></label>{% endfor %}</div></div>
+
+<h2>B3 · Declared tier · B4 · Organisational factors</h2><div class="card grid g2">
+<div>{% for t in forms.B3_TIERS %}<p><label><input type="radio" name="b3_tier" value="{{ loop.index0 }}" {% if ans.get('B3',{}).get('declared_tier')==loop.index0 %}checked{% endif %}> {{ loop.index0 }} · {{ t }}</label></p>{% endfor %}</div>
+<div>{% for k in forms.B4_FACTORS %}<p>{{ k.replace('_',' ')|capitalize }} <input type="number" min="0" max="5" name="b4_{{ k }}" value="{{ ans.get('B4',{}).get(k,'') }}" style="width:60px"></p>{% endfor %}</div></div>
+
+<h2>Form C · Documents{% if sc %} for {{ sc.rank }} ({{ sc.evidence_set }}){% endif %}</h2><div class="card"><table><tr><th>Ref</th><th>Document</th><th>Status</th><th>Their file</th></tr>
+{% set wanted = forms.documents_for_rank(sc.rank) if sc else forms.FORM_C %}{% for ref, sec, title, lvl in wanted %}{% set cur = ans.get('C',{}).get(ref, ['','']) %}
+<tr><td>{{ ref }}</td><td>{{ title }}{% if ref in forms.FORM_C_TO_SETUP %} <span class="chip ok">also feeds setup: {{ forms.FORM_C_TO_SETUP[ref][1] }}</span>{% endif %}</td>
+<td><select name="c_{{ ref }}">{% for opt in ['','sent','pending','none'] %}<option {% if cur[0]==opt %}selected{% endif %}>{{ opt }}</option>{% endfor %}</select></td><td><input name="cf_{{ ref }}" value="{{ cur[1] }}" style="width:100%"></td></tr>{% endfor %}</table>
+{% set nones = [] %}{% for ref, v in ans.get('C',{}).items() %}{% if v[0]=='none' %}{% set _ = nones.append(ref) %}{% endif %}{% endfor %}
+{% if nones %}<p class="muted">Marked "none" (candidate gaps for Form E): {{ nones|join(', ') }}</p>{% endif %}</div>
+
+<h2>Life-critical items (for setup)</h2><div class="card"><p class="muted">One per line, as written on their checklist. Leave blank to suggest from B1.</p><textarea name="life_critical_items" rows="6">{{ (ans.get('life_critical_items') or [])|join('\n') }}</textarea></div>
+<p><button>Save and score</button></p></form>{% endblock %}

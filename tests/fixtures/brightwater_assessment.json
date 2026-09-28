@@ -1,0 +1,389 @@
+{
+ "A1": {
+  "legal_name": "Brightwater Builders Group, Inc.",
+  "trading_name": "Brightwater Builders",
+  "address": "4400 W. Cypress St, Suite 300, Tampa, FL 33607",
+  "website": "brightwaterbuilders.example",
+  "year_established": 1998,
+  "primary_work": "General contracting and construction management: healthcare, education, commercial",
+  "regions": "West-central Florida",
+  "role_on_site": "General contractor"
+ },
+ "A2": {
+  "primary_contact": "Marisol Vance, Director of Safety & Health, mvance@brightwaterbuilders.example, (813) 555-0142",
+  "executive_accountable": "Terrence Halloway, VP of Operations, thalloway@brightwaterbuilders.example"
+ },
+ "A3": {
+  "permanent_employees": 180,
+  "temporary_workers": 12,
+  "peak_contractor_headcount": 240,
+  "active_projects": 6,
+  "pct_subcontracted": 85,
+  "safety_fte": 4,
+  "annual_hours_all_workers": 1150000
+ },
+ "A4": {
+  "written_policy_signed": "Yes",
+  "procedures_high_risk": "Yes",
+  "orientation_everyone": "Yes",
+  "risk_assessed_recorded": "Unsure",
+  "contractors_selected_on_safety": "Yes",
+  "investigate_beyond_immediate": "Unsure",
+  "serious_injury_5yr": "No",
+  "open_citations": "No",
+  "fixed_deadline": "Yes",
+  "client_asked_for_sms": "Yes"
+ },
+ "A5": {
+  "prompted_by": "Bayside Health's spec for the East Patient Tower requires documented contractor safety management, and our corrective actions live in a spreadsheet nobody trusts.",
+  "twelve_months": "Every sub on SAMC prequalified in one place, audits on phones, and an owner report we don't build by hand.",
+  "deadline": "Bayside's Joint Commission survey window opens mid-December 2026; the owner wants our contractor records auditable before then.",
+  "decider": "Terrence Halloway (VP Operations) with Marisol Vance",
+  "deadline_date": "2026-12-15"
+ },
+ "B1": [
+  [
+   "Work at height, edges and openings",
+   true,
+   5,
+   true
+  ],
+  [
+   "Excavation, trenching and shoring",
+   true,
+   3,
+   true
+  ],
+  [
+   "Confined space entry",
+   true,
+   2,
+   true
+  ],
+  [
+   "Control of hazardous energy and live electrical work",
+   true,
+   4,
+   true
+  ],
+  [
+   "Crane and heavy load lifting",
+   true,
+   4,
+   true
+  ],
+  [
+   "Mobile plant and vehicle movements",
+   true,
+   5,
+   true
+  ],
+  [
+   "Demolition or structural alteration",
+   true,
+   3,
+   false
+  ],
+  [
+   "Flammable, explosive or highly toxic substances",
+   true,
+   2,
+   false
+  ],
+  [
+   "Driving and fleet operations",
+   true,
+   4,
+   false
+  ],
+  [
+   "Marine, offshore or over-water work",
+   false,
+   null,
+   null
+  ],
+  [
+   "Scaffolding and elevated platforms",
+   true,
+   4,
+   true
+  ],
+  [
+   "Hot work — welding, cutting, grinding",
+   true,
+   4,
+   true
+  ],
+  [
+   "Pressure systems and pressure testing",
+   true,
+   2,
+   false
+  ],
+  [
+   "Asbestos, lead or legacy hazardous materials",
+   true,
+   2,
+   true
+  ],
+  [
+   "Respirable dust including silica",
+   true,
+   5,
+   true
+  ],
+  [
+   "Radiation sources or radiography",
+   false,
+   null,
+   null
+  ],
+  [
+   "Work adjacent to live traffic",
+   true,
+   3,
+   true
+  ],
+  [
+   "Remote or isolated working",
+   false,
+   null,
+   null
+  ],
+  [
+   "Fumes, solvents and chemical handling",
+   true,
+   3,
+   true
+  ],
+  [
+   "High noise environments",
+   true,
+   4,
+   false
+  ],
+  [
+   "Extreme heat or cold",
+   true,
+   5,
+   true
+  ],
+  [
+   "Manual handling and repetitive strain",
+   true,
+   5,
+   false
+  ],
+  [
+   "Hand and power tool use",
+   true,
+   5,
+   true
+  ],
+  [
+   "Fatigue from shift pattern or extended hours",
+   true,
+   3,
+   false
+  ],
+  [
+   "Other: infection control in an occupied hospital (ICRA)",
+   true,
+   5,
+   true
+  ]
+ ],
+ "B2": {
+  "years": [
+   2023,
+   2024,
+   2025
+  ],
+  "hours": [
+   1020000,
+   1090000,
+   1140000
+  ],
+  "fatalities": [
+   0,
+   0,
+   0
+  ],
+  "lost_time": [
+   2,
+   1,
+   2
+  ],
+  "dart_cases": [
+   5,
+   4,
+   5
+  ],
+  "medical_treatment": [
+   4,
+   5,
+   3
+  ],
+  "first_aid": [
+   31,
+   38,
+   44
+  ],
+  "total_recordable": [
+   9,
+   9,
+   8
+  ],
+  "benchmark_rate": [
+   2.4,
+   2.3,
+   2.3
+  ],
+  "near_misses": [
+   12,
+   19,
+   21
+  ],
+  "high_potential": [
+   2,
+   1,
+   3
+  ],
+  "emr": [
+   0.94,
+   0.91,
+   0.92
+  ],
+  "claim_cost": [
+   212000,
+   98000,
+   176000
+  ],
+  "band_selected": "Rates near benchmark, EMR 0.9 to 1.0, trend flat",
+  "integrity": {
+   "hours_include_contractors": "Partly",
+   "first_aid_logged": "Yes",
+   "bonus_tied_to_injuries": "Yes",
+   "near_misses_honest": "Unsure"
+  }
+ },
+ "B3": {
+  "declared_tier": 4,
+  "confirmation": {
+   "risk_register_today": "No",
+   "training_records_named_worker": "Yes",
+   "procedures_match_work": "Unsure",
+   "subs_same_requirements": "Yes",
+   "internal_audit_12m": "No",
+   "senior_review_schedule": "Yes",
+   "corrective_action_verified": "No",
+   "track_beyond_injuries": "Yes"
+  }
+ },
+ "B4": {
+  "workforce_stability": 3,
+  "subcontracting": 4,
+  "complexity_and_change": 4,
+  "schedule_pressure": 3,
+  "safety_resourcing": 2
+ },
+ "C": {
+  "D01": [
+   "sent",
+   "BWB Safety Policy 2025 signed.pdf"
+  ],
+  "D02": [
+   "sent",
+   "BWB-Safety-Program-Manual-Rev7.docx"
+  ],
+  "D03": [
+   "sent",
+   "BWB Org Chart Safety 2026.pdf"
+  ],
+  "D04": [
+   "sent",
+   "2026 Safety Goals.pptx"
+  ],
+  "D05": [
+   "sent",
+   "BWB JHA template SF-04.xlsx"
+  ],
+  "D06": [
+   "none",
+   ""
+  ],
+  "D07": [
+   "sent",
+   "TC-1 erection JHA; L2 mech room demo JHA.pdf"
+  ],
+  "D08": [
+   "none",
+   ""
+  ],
+  "D09": [
+   "sent",
+   "Manual sections 5, 7, 11 (in D02)"
+  ],
+  "D10": [
+   "sent",
+   "SAMC_ICRA_Permits_active.pdf; BWB hot work permit form SF-09.pdf"
+  ],
+  "D12": [
+   "sent",
+   "SAMC Emergency Action Plan.pdf"
+  ],
+  "D13": [
+   "none",
+   ""
+  ],
+  "D14": [
+   "sent",
+   "Training matrix by role.xlsx"
+  ],
+  "D15": [
+   "pending",
+   ""
+  ],
+  "D16": [
+   "sent",
+   "SAMC orientation deck + sign-in sheets Aug 2026.pdf"
+  ],
+  "D18": [
+   "sent",
+   "Manual section 2 (in D02) + BWB Vendor List export"
+  ],
+  "D19": [
+   "sent",
+   "Subcontract Exhibit D (excerpt).pdf"
+  ],
+  "D20": [
+   "sent",
+   "Suncoast Concrete SSSP rev 2.pdf"
+  ],
+  "D22": [
+   "sent",
+   "BWB_SF-12_Weekly_Site_Inspection.xlsx (blank + 2 completed)"
+  ],
+  "D23": [
+   "sent",
+   "Incident report 2026-04-11 (hand laceration); 2025-10-02 (fall from ladder, recordable).pdf"
+  ],
+  "D24": [
+   "sent",
+   "SAMC_Corrective_Action_Log_2026-09-26.xlsx"
+  ],
+  "D25": [
+   "none",
+   ""
+  ],
+  "D26": [
+   "none",
+   ""
+  ]
+ },
+ "C2": {
+  "nda_in_place": "Yes - 2026-09-20",
+  "routed_through_counsel": "Yes - incident report 2025-10-02 via Gallardo & Pike LLP",
+  "restrictions": "No AI processing of incident reports"
+ }
+}

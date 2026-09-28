@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block title %}{{ e.name }} · package{% endblock %}{% block body %}
+<p><a href="{{ url_for('engagement', eid=e.id) }}">← {{ e.name }}</a></p>
+<h1>Package for SafeTell</h1><p class="muted">Clean files in SafeTell's import formats. The customer's admin uploads them in SafeTell, which checks everything again before anything is written.</p>
+{% for w in warnings %}<div class="flash">{{ w }}</div>{% endfor %}
+<div class="card"><table><tr><th>File</th><th>Goes to (in SafeTell)</th><th>Contents</th></tr>
+<tr><td>Onboarding workbook</td><td>Onboarding → upload workbook</td><td>{{ contractors|length }} contractors pre-filled; decisions tabs to complete at kickoff</td></tr>
+<tr><td>history_*.xlsx (one per section)</td><td>Onboarding → Import history (columns match automatically)</td><td>{{ history.corrective_actions|length }} corrective actions · {{ history.injuries|length }} injuries · {{ history.hours|length }} monthly hours</td></tr>
+{% for u, recs, lc in checklists %}<tr><td>checklist ({{ u.filename }})</td><td>Inspection templates → Import Excel</td><td>{{ recs|length }} items, {{ lc|length }} life-critical</td></tr>{% endfor %}
+<tr><td>requirements.json</td><td>Requirement import (to be added to SafeTell)</td><td>{{ requirements|length }} reviewed requirements</td></tr></table>
+<p><a class="btn" href="{{ url_for('package_zip', eid=e.id) }}">Download package (.zip)</a></p></div>{% endblock %}

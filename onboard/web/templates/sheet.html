@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block title %}{{ u.filename }} · columns{% endblock %}{% block body %}
+<p><a href="{{ url_for('engagement', eid=e.id) }}">← {{ e.name }}</a></p>
+<h1>{{ u.filename }}</h1><p class="muted">Tell us which of their columns is which. Nothing is guessed silently: check the preview before saving.</p>
+<form method="get" class="card grid g4">
+ <label>Sheet<br><select name="sheet" onchange="this.form.submit()">{% for s in sheets %}<option {% if s==sheet_name %}selected{% endif %}>{{ s }}</option>{% endfor %}</select></label>
+ <label>This is their<br><select name="target" onchange="this.form.submit()">{% for k,t in targets.items() %}<option value="{{ k }}" {% if k==target %}selected{% endif %}>{{ t.label }}</option>{% endfor %}</select></label>
+ <label>Header row<br><input type="number" name="header" min="1" value="{{ header + 1 }}" onchange="this.form.submit()"></label><span></span></form>
+
+<div class="card"><h3>First rows as they sent them</h3><div style="overflow:auto"><table>
+{% for row in grid %}<tr {% if loop.index0 == header %}style="background:#eef4ff;font-weight:600"{% endif %}><td class="muted small">{{ loop.index }}</td>{% for c in row %}<td class="small">{{ c }}</td>{% endfor %}</tr>{% endfor %}</table></div></div>
+
+<form method="post"><input type="hidden" name="save" value="1"><input type="hidden" name="sheet" value="{{ sheet_name }}"><input type="hidden" name="target" value="{{ target }}"><input type="hidden" name="header" value="{{ header + 1 }}">
+<div class="card"><h3>Columns</h3><div class="grid g3">
+{% for key, label, req, hints in targets[target].fields %}<label>{{ label }}{% if req %} *{% endif %}<br><select name="col_{{ key }}"><option value="">(not in their sheet)</option>
+{% for h in headers if h %}<option {% if cols.get(key)==h %}selected{% endif %}>{{ h }}</option>{% endfor %}</select></label>{% endfor %}</div>
+{% if missing %}<p class="flash">Required and not mapped: {{ missing|join(', ') }}</p>{% endif %}</div>
+
+{% if target == 'contractors' and info.duplicates %}<div class="card"><h3>Possible duplicates</h3><p class="muted">Tick the rows to leave out.</p>
+{% for dup in info.duplicates %}<p>{{ dup.companies[0] }} (row {{ dup.rows[0] }}) / {{ dup.companies[1] }} (row {{ dup.rows[1] }}) — {{ dup.why }}
+<label><input type="checkbox" name="exclude" value="{{ dup.rows[1] }}" {% if dup.rows[1] in info.exclude %}checked{% endif %}> leave out row {{ dup.rows[1] }}</label></p>{% endfor %}</div>{% endif %}
+
+{% if target == 'checklist' %}<div class="card"><h3>Life-critical items</h3>
+{% if info.life_critical_list %}<p class="muted">Matched against their list: {{ info.life_critical_list|join('; ') }}. A failed life-critical item stops the work in SafeTell. Confirm each.</p>{% else %}<p class="flash">No life-critical list yet: add it on the assessment page (or it's suggested from their Form B1 severity-5 activities).</p>{% endif %}
+<table><tr><th>Life-critical?</th><th>Item</th><th>Their Critical column</th><th>Matches their list</th><th></th></tr>
+{% for s in info.suggestions %}<tr><td><input type="checkbox" name="lc" value="{{ s.index }}" {% if s.index in info.confirmed %}checked{% endif %}></td><td>{{ s.text }}</td><td>{{ s.their_column }}</td><td>{{ s.list_match or '' }}</td>
+<td>{% if s.disagree %}<span class="chip warn">disagree - decide</span>{% endif %}</td></tr>{% endfor %}</table></div>{% endif %}
+
+<div class="card"><h3>Preview ({{ recs|length }} rows)</h3><div style="overflow:auto"><table><tr><th>Row</th>{% for key, label, req, hints in targets[target].fields %}<th>{{ label }}</th>{% endfor %}</tr>
+{% for r in recs[:15] %}<tr><td>{{ r._row }}</td>{% for key, label, req, hints in targets[target].fields %}<td class="small">{{ r.get(key, '') }}</td>{% endfor %}</tr>{% endfor %}</table></div>
+<p><button {% if missing %}disabled{% endif %}>Save mapping</button> {% if saved %}<span class="chip ok">saved</span>{% endif %}</p></div></form>
+{% endblock %}

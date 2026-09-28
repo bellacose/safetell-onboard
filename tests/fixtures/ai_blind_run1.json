@@ -1,0 +1,605 @@
+[
+  {
+    "source": "manual",
+    "citation": "1.3",
+    "title": "Designate safety representative",
+    "requirement_text": "Every subcontractor shall designate a competent on-site safety representative for each project, by name, before mobilization.",
+    "category": "program",
+    "high_risk": false,
+    "verbatim_quote": "shall designate a competent on-site safety representative"
+  },
+  {
+    "source": "manual",
+    "citation": "2.1",
+    "title": "Prequalification required",
+    "requirement_text": "Subcontractors shall be prequalified before a subcontract is issued.",
+    "category": "prequalification",
+    "high_risk": false,
+    "verbatim_quote": "shall be prequalified before a subcontract is issued"
+  },
+  {
+    "source": "manual",
+    "citation": "2.5",
+    "title": "Current certificates of insurance",
+    "requirement_text": "Certificates of insurance shall be current at all times; a subcontractor whose certificate lapses shall not work on site until a current certificate is received.",
+    "category": "prequalification",
+    "high_risk": false,
+    "verbatim_quote": "shall be current at all times"
+  },
+  {
+    "source": "manual",
+    "citation": "3.1",
+    "title": "Site-specific safety plan",
+    "requirement_text": "Each subcontractor shall submit a site-specific safety plan within 10 working days of award and before mobilization.",
+    "category": "planning",
+    "high_risk": false,
+    "verbatim_quote": "shall submit a site-specific safety plan within 10 working days"
+  },
+  {
+    "source": "manual",
+    "citation": "3.2",
+    "title": "Safety plan content requirements",
+    "requirement_text": "The plan shall include the subcontractor's scope, hazard analysis for each high-risk activity, competent persons, emergency contacts and a training matrix.",
+    "category": "planning",
+    "high_risk": false,
+    "verbatim_quote": "shall include...hazard analysis for each high-risk activity"
+  },
+  {
+    "source": "manual",
+    "citation": "3.3",
+    "title": "Plan approval before work",
+    "requirement_text": "Work may not start until the site-specific safety plan is approved by Brightwater's Project Safety Manager.",
+    "category": "planning",
+    "high_risk": false,
+    "verbatim_quote": "Work may not start until it is approved"
+  },
+  {
+    "source": "manual",
+    "citation": "3.4",
+    "title": "Activity hazard analyses before phases",
+    "requirement_text": "Activity hazard analyses (AHAs) shall be completed before each new phase of work and reviewed with the crew.",
+    "category": "planning",
+    "high_risk": false,
+    "verbatim_quote": "shall be completed before each new phase"
+  },
+  {
+    "source": "manual",
+    "citation": "4.1",
+    "title": "Site orientation required",
+    "requirement_text": "Every person working on a Brightwater site shall complete the Brightwater site orientation before starting work.",
+    "category": "training",
+    "high_risk": false,
+    "verbatim_quote": "shall complete the Brightwater site orientation"
+  },
+  {
+    "source": "manual",
+    "citation": "4.2",
+    "title": "Healthcare infection control training",
+    "requirement_text": "On healthcare projects, workers in or next to occupied areas shall also complete the owner's infection control and hospital awareness module.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "shall also complete the owner's infection control"
+  },
+  {
+    "source": "manual",
+    "citation": "4.3",
+    "title": "Training records retention",
+    "requirement_text": "Subcontractors shall keep their own training records and shall produce them on request within 24 hours.",
+    "category": "training",
+    "high_risk": false,
+    "verbatim_quote": "shall produce them on request within 24 hours"
+  },
+  {
+    "source": "manual",
+    "citation": "5.1",
+    "title": "Fall protection at 6 feet",
+    "requirement_text": "Fall protection is required at 6 feet or more above a lower level for all trades and all activities, including steel erection and leading-edge work.",
+    "category": "fall_protection",
+    "high_risk": true,
+    "verbatim_quote": "Fall protection is required at 6 feet"
+  },
+  {
+    "source": "manual",
+    "citation": "5.2",
+    "title": "Scaffold guardrails at 6 feet",
+    "requirement_text": "Scaffolds shall have guardrails at 6 feet; the OSHA 10-foot scaffold trigger does not apply on Brightwater sites.",
+    "category": "fall_protection",
+    "high_risk": true,
+    "verbatim_quote": "Scaffolds shall have guardrails at 6 feet"
+  },
+  {
+    "source": "manual",
+    "citation": "5.3",
+    "title": "Fall arrest system inspection",
+    "requirement_text": "Personal fall arrest systems shall be inspected before each use and anchored to anchors rated for 5,000 lb or designed by a qualified person.",
+    "category": "fall_protection",
+    "high_risk": true,
+    "verbatim_quote": "shall be inspected before each use and anchored"
+  },
+  {
+    "source": "manual",
+    "citation": "5.4",
+    "title": "Cover and mark openings",
+    "requirement_text": "Floor and roof openings shall be covered, secured and marked \"HOLE\" or \"COVER\" as soon as they are created.",
+    "category": "fall_protection",
+    "high_risk": true,
+    "verbatim_quote": "shall be covered, secured and marked"
+  },
+  {
+    "source": "manual",
+    "citation": "6.1",
+    "title": "Ladder use plan approval",
+    "requirement_text": "Use of step or extension ladders above 6 feet requires the superintendent's approval of a ladder use plan.",
+    "category": "ladders_lifts",
+    "high_risk": false,
+    "verbatim_quote": "requires the superintendent's approval"
+  },
+  {
+    "source": "manual",
+    "citation": "6.2",
+    "title": "Aerial lift training and tie-off",
+    "requirement_text": "Aerial lift operators shall be trained and familiarized on the model used; occupants of boom lifts shall be tied off to the manufacturer's anchor.",
+    "category": "ladders_lifts",
+    "high_risk": true,
+    "verbatim_quote": "shall be trained...shall be tied off"
+  },
+  {
+    "source": "manual",
+    "citation": "7.1",
+    "title": "811 locate ticket required",
+    "requirement_text": "Before any digging, a Sunshine 811 locate ticket shall be current and private utilities shall be located by a private locator.",
+    "category": "utilities",
+    "high_risk": true,
+    "verbatim_quote": "811 locate ticket shall be current"
+  },
+  {
+    "source": "manual",
+    "citation": "7.2",
+    "title": "Excavation protective systems",
+    "requirement_text": "Excavations 5 feet or deeper shall have a protective system; excavations over 20 feet shall have a protective system designed by a registered professional engineer.",
+    "category": "excavation",
+    "high_risk": true,
+    "verbatim_quote": "Excavations 5 feet or deeper shall have"
+  },
+  {
+    "source": "manual",
+    "citation": "7.3",
+    "title": "Daily excavation inspections",
+    "requirement_text": "A competent person shall inspect excavations daily, after every rain event and after any change in conditions, and record the inspection.",
+    "category": "excavation",
+    "high_risk": true,
+    "verbatim_quote": "shall inspect excavations daily...and record"
+  },
+  {
+    "source": "manual",
+    "citation": "7.4",
+    "title": "Spoil setback from edge",
+    "requirement_text": "Spoil and equipment shall be kept at least 2 feet from the edge of an excavation.",
+    "category": "excavation",
+    "high_risk": true,
+    "verbatim_quote": "shall be kept at least 2 feet from edge"
+  },
+  {
+    "source": "manual",
+    "citation": "8.1",
+    "title": "Hot work permit required",
+    "requirement_text": "All welding, cutting, brazing and grinding outside designated shop areas requires a Brightwater hot work permit.",
+    "category": "hot_work_fire",
+    "high_risk": true,
+    "verbatim_quote": "requires a Brightwater hot work permit"
+  },
+  {
+    "source": "manual",
+    "citation": "8.2",
+    "title": "Fire watch and combustible control",
+    "requirement_text": "Combustibles within 35 feet shall be removed or protected, and a fire watch shall be maintained during the work and for 60 minutes after it ends.",
+    "category": "hot_work_fire",
+    "high_risk": true,
+    "verbatim_quote": "fire watch shall be maintained...60 minutes after"
+  },
+  {
+    "source": "manual",
+    "citation": "8.3",
+    "title": "ILSM assessment for hot work",
+    "requirement_text": "Hot work in or next to an occupied healthcare building also requires an interim life safety measures (ILSM) assessment and the owner's approval before the permit is issued.",
+    "category": "hot_work_fire",
+    "high_risk": true,
+    "verbatim_quote": "requires an interim life safety measures assessment"
+  },
+  {
+    "source": "manual",
+    "citation": "8.4",
+    "title": "Fire system impairment control",
+    "requirement_text": "Fire protection systems shall not be impaired without an approved impairment notice; the owner shall be notified and a fire watch posted for the duration.",
+    "category": "hot_work_fire",
+    "high_risk": true,
+    "verbatim_quote": "shall not be impaired without approved notice"
+  },
+  {
+    "source": "manual",
+    "citation": "9.1",
+    "title": "Lockout/tagout with locks",
+    "requirement_text": "Lockout/tagout shall follow the subcontractor's written energy control program, reviewed by Brightwater, with individual locks for each worker.",
+    "category": "hazardous_energy",
+    "high_risk": true,
+    "verbatim_quote": "shall follow...with individual locks"
+  },
+  {
+    "source": "manual",
+    "citation": "9.2",
+    "title": "Zero energy verification",
+    "requirement_text": "Zero energy shall be verified by try-out and testing before work begins.",
+    "category": "hazardous_energy",
+    "high_risk": true,
+    "verbatim_quote": "Zero energy shall be verified"
+  },
+  {
+    "source": "manual",
+    "citation": "9.3",
+    "title": "Utility shutdown coordination",
+    "requirement_text": "Tie-ins to existing hospital systems shall be coordinated through the owner's utility shutdown request process with at least 14 calendar days' notice.",
+    "category": "utilities",
+    "high_risk": false,
+    "verbatim_quote": "shall be coordinated...14 calendar days' notice"
+  },
+  {
+    "source": "manual",
+    "citation": "10.1",
+    "title": "Energized electrical prohibition",
+    "requirement_text": "Energized electrical work is prohibited unless justified under NFPA 70E and authorized on an energized electrical work permit signed by the subcontractor, Brightwater's Project Safety Manager and the Project Manager.",
+    "category": "electrical",
+    "high_risk": true,
+    "verbatim_quote": "Energized electrical work is prohibited"
+  },
+  {
+    "source": "manual",
+    "citation": "10.2",
+    "title": "Temporary power GFCI protection",
+    "requirement_text": "Temporary power shall be GFCI protected, and cords inspected daily.",
+    "category": "electrical",
+    "high_risk": false,
+    "verbatim_quote": "shall be GFCI protected, and cords inspected"
+  },
+  {
+    "source": "manual",
+    "citation": "11.1",
+    "title": "Critical lift plan required",
+    "requirement_text": "A critical lift plan is required for any lift above 75% of the crane's rated capacity, tandem lifts, personnel lifts, and any lift over an occupied building or occupied area.",
+    "category": "cranes_rigging",
+    "high_risk": true,
+    "verbatim_quote": "plan is required for any lift above 75%"
+  },
+  {
+    "source": "manual",
+    "citation": "11.2",
+    "title": "Lift plan submission deadline",
+    "requirement_text": "Critical lift plans shall be submitted at least 48 hours before the lift and approved by Brightwater's Project Safety Manager.",
+    "category": "cranes_rigging",
+    "high_risk": true,
+    "verbatim_quote": "shall be submitted at least 48 hours"
+  },
+  {
+    "source": "manual",
+    "citation": "11.3",
+    "title": "No loads over occupied areas",
+    "requirement_text": "Loads shall not be lifted over the occupied hospital unless the owner has approved a written evacuation or protection plan for the affected area.",
+    "category": "cranes_rigging",
+    "high_risk": true,
+    "verbatim_quote": "shall not be lifted over the occupied"
+  },
+  {
+    "source": "manual",
+    "citation": "11.4",
+    "title": "Crane operator certification",
+    "requirement_text": "Operators shall be certified; riggers and signal persons shall be qualified, with proof available on site.",
+    "category": "cranes_rigging",
+    "high_risk": true,
+    "verbatim_quote": "Operators shall be certified; riggers shall be qualified"
+  },
+  {
+    "source": "manual",
+    "citation": "12.1",
+    "title": "Confined space entry permits",
+    "requirement_text": "Permit-required confined spaces shall be entered only under a written entry permit with atmospheric testing and a rescue plan.",
+    "category": "confined_space",
+    "high_risk": true,
+    "verbatim_quote": "shall be entered only under a written entry permit"
+  },
+  {
+    "source": "manual",
+    "citation": "13.1",
+    "title": "Silica exposure controls",
+    "requirement_text": "Silica-generating tasks shall follow Table 1 of 29 CFR 1926.1153 or an exposure assessment.",
+    "category": "health",
+    "high_risk": false,
+    "verbatim_quote": "shall follow Table 1 of 29 CFR 1926.1153"
+  },
+  {
+    "source": "manual",
+    "citation": "13.2",
+    "title": "Asbestos and lead survey",
+    "requirement_text": "Work that disturbs ceilings, walls or floors in an existing hospital area requires an asbestos and lead survey review before work starts.",
+    "category": "health",
+    "high_risk": false,
+    "verbatim_quote": "requires an asbestos and lead survey review"
+  },
+  {
+    "source": "manual",
+    "citation": "13.3",
+    "title": "Noise and vibration limits",
+    "requirement_text": "Noise and vibration next to occupied patient areas shall stay within the limits set by the owner, and shall be monitored when the owner requests it.",
+    "category": "noise_vibration",
+    "high_risk": false,
+    "verbatim_quote": "shall stay within the limits set by owner"
+  },
+  {
+    "source": "manual",
+    "citation": "14.1",
+    "title": "Minimum PPE requirements",
+    "requirement_text": "Minimum PPE is hard hat (Type II on steel and crane work), safety glasses, high-visibility garment (Class 2), gloves suited to the task and safety-toe boots.",
+    "category": "ppe",
+    "high_risk": false,
+    "verbatim_quote": "hard hat...safety glasses...safety-toe boots"
+  },
+  {
+    "source": "manual",
+    "citation": "15.1",
+    "title": "Daily cleaning and exits clear",
+    "requirement_text": "Work areas shall be cleaned daily; walkways and exits shall be kept clear at all times.",
+    "category": "housekeeping",
+    "high_risk": false,
+    "verbatim_quote": "shall be cleaned daily; walkways kept clear"
+  },
+  {
+    "source": "manual",
+    "citation": "15.2",
+    "title": "Emergency routes never blocked",
+    "requirement_text": "Hospital entrances, ambulance routes and fire lanes shall never be blocked, even temporarily.",
+    "category": "site_access",
+    "high_risk": false,
+    "verbatim_quote": "shall never be blocked, even temporarily"
+  },
+  {
+    "source": "manual",
+    "citation": "16.1",
+    "title": "ICRA assessment and permit",
+    "requirement_text": "An infection control risk assessment (ICRA) and ICRA permit shall be in place before any work in or next to an occupied healthcare area.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "ICRA and ICRA permit shall be in place"
+  },
+  {
+    "source": "manual",
+    "citation": "16.2",
+    "title": "Class III/IV barriers and controls",
+    "requirement_text": "Class III and IV work requires hard barriers sealed floor to deck, negative air pressure verified and recorded at least daily, and HEPA-filtered exhaust.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "negative air pressure...recorded at least daily"
+  },
+  {
+    "source": "manual",
+    "citation": "16.3",
+    "title": "Barrier inspection and breach",
+    "requirement_text": "Barriers shall be inspected daily by the subcontractor and weekly by the owner's infection prevention staff; any breach stops the work until it is repaired.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "shall be inspected daily...breach stops work"
+  },
+  {
+    "source": "manual",
+    "citation": "17.1",
+    "title": "Weekly site inspections",
+    "requirement_text": "The superintendent shall perform a documented weekly site inspection.",
+    "category": "inspections",
+    "high_risk": false,
+    "verbatim_quote": "documented weekly site inspection"
+  },
+  {
+    "source": "manual",
+    "citation": "17.2",
+    "title": "Monthly subcontractor audits",
+    "requirement_text": "The Project Safety Manager shall audit each subcontractor at least monthly.",
+    "category": "inspections",
+    "high_risk": false,
+    "verbatim_quote": "audits each subcontractor at least monthly"
+  },
+  {
+    "source": "manual",
+    "citation": "18.2",
+    "title": "Deficiency correction timelines",
+    "requirement_text": "Imminent danger shall be corrected immediately and the work stopped until it is; Serious deficiencies shall be corrected within 24 hours; all others within 7 days.",
+    "category": "corrective_actions",
+    "high_risk": true,
+    "verbatim_quote": "Imminent danger shall be corrected immediately"
+  },
+  {
+    "source": "manual",
+    "citation": "18.3",
+    "title": "Escalation of overdue actions",
+    "requirement_text": "Corrective actions not closed on time shall be escalated to the subcontractor's project manager, then its principal after 2 days, then Brightwater's VP of Operations after 5 days.",
+    "category": "corrective_actions",
+    "high_risk": false,
+    "verbatim_quote": "not closed on time are escalated"
+  },
+  {
+    "source": "manual",
+    "citation": "19.1",
+    "title": "Immediate incident reporting",
+    "requirement_text": "All injuries, near misses and property damage shall be reported to the superintendent immediately and in writing within 1 hour.",
+    "category": "incidents",
+    "high_risk": false,
+    "verbatim_quote": "shall be reported immediately and within 1 hour"
+  },
+  {
+    "source": "manual",
+    "citation": "19.2",
+    "title": "Incident investigation within 72hr",
+    "requirement_text": "Serious incidents shall be investigated to root cause within 72 hours with a written report.",
+    "category": "incidents",
+    "high_risk": false,
+    "verbatim_quote": "investigated to root cause within 72 hours"
+  },
+  {
+    "source": "manual",
+    "citation": "19.3",
+    "title": "Monthly injury data submission",
+    "requirement_text": "Subcontractors shall submit monthly hours worked and injury data by the 5th of the following month.",
+    "category": "incidents",
+    "high_risk": false,
+    "verbatim_quote": "submit monthly hours...by the 5th"
+  },
+  {
+    "source": "manual",
+    "citation": "20.1",
+    "title": "Stop work authority and obligation",
+    "requirement_text": "Every person on site has the obligation to stop work that is unsafe.",
+    "category": "stop_work",
+    "high_risk": true,
+    "verbatim_quote": "obligation to stop work that is unsafe"
+  },
+  {
+    "source": "manual",
+    "citation": "20.2",
+    "title": "Stop work restart procedure",
+    "requirement_text": "Work stopped for an imminent danger shall restart only after the superintendent and the subcontractor's foreman agree the hazard is controlled, and the Project Safety Manager is informed.",
+    "category": "stop_work",
+    "high_risk": true,
+    "verbatim_quote": "restarts only after...agree hazard controlled"
+  },
+  {
+    "source": "manual",
+    "citation": "21.1",
+    "title": "Drug and alcohol program",
+    "requirement_text": "Subcontractors shall maintain a drug and alcohol program with pre-access, post-incident and reasonable-suspicion testing.",
+    "category": "substance",
+    "high_risk": false,
+    "verbatim_quote": "shall maintain a drug and alcohol program"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.3.A",
+    "title": "Comply with safety rules",
+    "requirement_text": "Contractor shall comply with the Owner's Contractor Safety Rules and with OSHA 29 CFR 1926; the more stringent governs.",
+    "category": "program",
+    "high_risk": false,
+    "verbatim_quote": "shall comply with the Owner's Contractor Safety Rules"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.3.B",
+    "title": "Construction badge requirement",
+    "requirement_text": "All contractor personnel shall wear an Owner-issued construction badge while on the campus.",
+    "category": "site_access",
+    "high_risk": false,
+    "verbatim_quote": "shall wear an Owner-issued construction badge"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.4.A",
+    "title": "No loads over occupied buildings",
+    "requirement_text": "No crane load shall pass over any occupied building. Loads over an unoccupied portion require an Owner-approved lift plan and a cleared zone.",
+    "category": "cranes_rigging",
+    "high_risk": true,
+    "verbatim_quote": "No crane load shall pass over occupied"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.4.B",
+    "title": "Subcontractor EMR limit",
+    "requirement_text": "Contractor subcontractors shall have an EMR of 1.10 or less; exceptions require written Owner approval.",
+    "category": "prequalification",
+    "high_risk": false,
+    "verbatim_quote": "shall have an EMR of 1.10 or less"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.5.A",
+    "title": "Utility shutdown advance notice",
+    "requirement_text": "Utility shutdowns affecting the hospital require a Utility Shutdown Request submitted 14 calendar days in advance and approved by the Director of Facilities & Construction.",
+    "category": "utilities",
+    "high_risk": false,
+    "verbatim_quote": "require...14 calendar days in advance"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.5.B",
+    "title": "Fire system impairment notice",
+    "requirement_text": "Any impairment of fire alarm, sprinkler or smoke control systems requires an Owner-approved impairment notice and interim life safety measures (ILSM) per The Joint Commission LS.01.02.01 and NFPA 101.",
+    "category": "hot_work_fire",
+    "high_risk": true,
+    "verbatim_quote": "requires an Owner-approved impairment notice"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.6.A",
+    "title": "Noise limits and notice",
+    "requirement_text": "Noise at the nearest occupied patient room shall not exceed 70 dBA between 07:00 and 19:00 and 55 dBA at other times; vibration-generating work next to surgery requires 48 hours' notice.",
+    "category": "noise_vibration",
+    "high_risk": false,
+    "verbatim_quote": "shall not exceed 70 dBA...55 dBA"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.7.A",
+    "title": "Emergency access unobstructed",
+    "requirement_text": "Emergency exits, ambulance routes and fire lanes shall remain unobstructed at all times.",
+    "category": "site_access",
+    "high_risk": false,
+    "verbatim_quote": "shall remain unobstructed at all times"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 23 1.8.A",
+    "title": "Injury report to owner",
+    "requirement_text": "The Contractor shall report any injury or near miss on the campus to the Owner's Safety Officer within 2 hours.",
+    "category": "incidents",
+    "high_risk": false,
+    "verbatim_quote": "shall report...to the Owner within 2 hours"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 13.13 1.2.A",
+    "title": "ICRA and permit issuance",
+    "requirement_text": "An Infection Control Risk Assessment (ICRA) shall be completed with the Owner's Infection Prevention department for each area of work, using the ASHE ICRA 2.0 matrix, and an ICRA permit shall be issued before work begins.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "ICRA shall be completed...permit issued"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 13.13 1.3.A",
+    "title": "Class III/IV barrier requirements",
+    "requirement_text": "Class III and IV work requires rigid barriers from floor to deck, sealed; negative pressure of at least -0.01 in. w.c. continuously monitored with an alarmed manometer and recorded daily; HEPA filtration of exhaust.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "rigid barriers...negative pressure...recorded daily"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 13.13 1.3.B",
+    "title": "Class IV anteroom protection",
+    "requirement_text": "Class IV work requires an anteroom; workers shall wear shoe covers and coveralls that are removed on exit.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "anteroom is required; workers wear shoe covers"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 13.13 1.4.A",
+    "title": "Barrier inspection and breach",
+    "requirement_text": "Barriers shall be inspected daily by the Contractor and weekly by Infection Prevention. Any breach shall stop work until repaired and re-inspected.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "shall be inspected daily...breach shall stop work"
+  },
+  {
+    "source": "owner_spec",
+    "citation": "01 35 13.13 1.5.A",
+    "title": "Debris removal procedures",
+    "requirement_text": "Debris shall be removed in covered carts by designated routes and times approved by the Owner.",
+    "category": "infection_control",
+    "high_risk": true,
+    "verbatim_quote": "shall be removed in covered carts"
+  }
+]

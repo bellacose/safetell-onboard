@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}SafeTell Onboard{% endblock %}</title><link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"></head>
+<body><header class="top"><a href="{{ url_for('index') }}">SafeTell Onboard</a><span class="muted small" style="color:#98a2b3">assess the customer, prepare their data for SafeTell</span></header>
+<main>{% for m in get_flashed_messages() %}<div class="flash">{{ m }}</div>{% endfor %}{% block body %}{% endblock %}</main></body></html>
